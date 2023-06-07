@@ -1,0 +1,73 @@
+body{
+    background-color: #F2F2F8;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 48px 0px;
+    background-color: #212529;
+    transition: all 0.3s;
+    width: 350px;
+    height: 100%;
+    /*Overflow*/
+    overflow: hidden;
+    color: white;
+    
+  }
+
+  .sidebar.collapsed {
+    width: 0px;
+
+  }
+
+  .navbar{
+    background-color: #24262E;
+  }
+
+  .subcontent{
+    position: relative;
+    transition: all 0.3s;
+    
+    
+  }
+
+  .subcontent.collapsed {
+    margin-left: 175px;
+    margin-right: 175px;
+  }
+
+
+  .content {
+    margin-left: 350px;
+    transition: all 0.3s;
+    position: relative;
+    
+  }
+
+  .content.collapsed {
+    margin-left: 0px;
+  }
+
+  .finfo {
+    color : #68EDFF;
+  }
+
+  .half-rounded-button {
+  border-radius: 20px;
+  background-color: #212529;
+  }
+
+  .submit-button{
+    border-radius: 50px;
+    margin-left: 90px;
+    
+  }
+  
+  .info {
+    width: 900px;
+  }
+  

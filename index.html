@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collapsed Sidebar Example</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  
+  <script src="https://kit.fontawesome.com/d43e9fb66a.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="sidebar">
+    <form class="mx-4">
+      <label class="form-label fw-bold">UPT</label>
+      <input class="form-select">
+      <div class="form-text finfo">Pilih daerah UPT yang dibutuhkan.*</div>
+      <br>
+      <label class="form-label fw-bold">Tanggal Awal</label>
+      <input class="form-select">
+      <div class="form-text finfo">Tanggal awal untuk range yang dibutuhkan.*</div>
+      <br>
+      <label class="form-label fw-bold">Tanggal Akhir</label>
+      <input class="form-select">
+      <div class="form-text finfo">Tanggal akhir untuk range yang dibutuhkan.*</div>
+      <br>
+      <button class="btn btn-success submit-button fw-bold"> <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> Submit </button>
+    </form>
+  </div>
+  
+  <div class="content">
+
+      <div class="row">
+        <nav class="navbar navbar-dark">
+          <button class="btn btn-dark rounded-button" onclick="toggleSidebar()"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+          <span class="navbar-brand mx-auto">
+            <h3><img class="navbar-brand" src="bpdjatim.png" width="34px" width="48px">Prioritas Penempatan Lokasi Samsat Keliling</h1>
+          </span>
+        </nav>
+      </div>
+
+      <div class="row subcontent">
+        <div class="col mx-3 my-4">
+          <div class="row px-auto">
+            <div class="card info mx-auto">
+              <div class="card-body px-3">
+                
+                  <div class="row m-0">
+                    <div class="col border-end m-0">
+                      <div class="row pt-2">
+                        <div class="col-md-2 p-0 ">      
+                          <i class="fa-solid fa-hourglass-start rounded-circle p-3 m-0" style="color: #ffffff; background-color: #F97134;"></i>
+                        </div>
+                        <div class="col-md-10  px-3 pt-1">
+                          <p class=" mb-0" style="font-size: 0.8em;">Tanggal Mulai</p>
+                          <p class=" fw-bold ">01 April 2023</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col border-end m-0 ps-4">
+                      <div class="row pt-2">
+                        <div class="col-md-2 p-0 ">      
+                          <i class="fa-solid fa-hourglass-end rounded-circle p-3" style="color: #ffffff; background-color: #FF8F2F;"></i>
+                        </div>
+                        <div class="col-md-10  px-3 pt-1">
+                          <p class=" mb-0" style="font-size: 0.8em;">Tanggal Akhir</p>
+                          <p class=" fw-bold ">30 April 2023</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col border-end m-0 ps-4">
+                      <div class="row pt-2">
+                        <div class="col-md-2 p-0 ">      
+                          <i class="fa-solid fa-coins rounded-circle p-3" style="color: #ffffff; background-color: #A02B68;"></i>
+                        </div>
+                        <div class="col-md-10 ps-4 pt-1">
+                          <p class=" mb-0" style="font-size: 0.8em;">Total Potensi</p>
+                          <p class=" fw-bold ">Rp. 132,42 M</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col m-0 ps-4">
+                      <div class="row pt-2">
+                        <div class="col-md-2 p-0 ">      
+                          <i class="fa-sharp fa-solid fa-car-side rounded-circle p-3" style="color: #ffffff; background-color: #6F0B5B;"></i>
+                        </div>
+                        <div class="col-md-10 ps-4 pt-1">
+                          <p class=" mb-0" style="font-size: 0.8em;">Total Objek</p>
+                          <p class=" fw-bold ">123,790 Unit</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+            </div>  
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-4 ms-auto border">
+              <div class="card m-0" >
+              <div class="card-body p-4">
+                <div class="row p-0 mx-0">
+                  <h3 class="m-0 p-0 fw-bold">Total Potensi</h3>
+                  <p class="mt-0 p-0">Pajak Kendaraan Bermotor per daerah</p>
+                </div>
+                <div class="row m-0">
+                  <div class="col-md-1 p-0 ">
+                  <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #F25022;">
+                    <h5 class="text-center m-0">1</h5>
+                  </div>
+                  </div>
+                  <div class="col-md-6 pt-1">
+                    <h5>Tambaksari</h5>
+                  </div>
+                  <div class="col-md-5 pt-1 text-end">
+                    <h5>Rp. 33,9 M</h5>
+                  </div>
+                </div>
+                <div class="row m-0 mt-1 ">
+                  <div class="col-md-1 p-0 ">
+                  <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #FFB900;">
+                    <h5 class="text-center m-0">2</h5>
+                  </div>
+                  </div>
+                  <div class="col-md-6 pt-1">
+                    <h5>Gubeng</h5>
+                  </div>
+                  <div class="col-md-5 pt-1 text-end">
+                    <h5>Rp. 23,13 M</h5>
+                  </div>
+                </div>
+                <div class="row m-0 mt-1">
+                  <div class="col-md-1 p-0 ">
+                  <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #7FBA00;">
+                    <h5 class="text-center m-0">3</h5>
+                  </div>
+                  </div>
+                  <div class="col-md-6 pt-1">
+                    <h5>Sukolilo</h5>
+                  </div>
+                  <div class="col-md-5 pt-1 text-end">
+                    <h5>Rp. 25,91 M</h5>
+                  </div>
+                </div>
+                <div class="row m-0 mt-1">
+                  <div class="col-md-1 p-0 ">
+                  <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #00A4EF;">
+                    <h5 class="text-center m-0">4</h5>
+                  </div>
+                  </div>
+                  <div class="col-md-6 pt-1">
+                    <h5>Rungkut</h5>
+                  </div>
+                  <div class="col-md-5 pt-1 text-end">
+                    <h5>Rp. 20,13 M</h5>
+                  </div>
+                </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 border">
+              <div class="card">
+                <div class="card-body p-4">
+                  
+                  <div class="row p-0 mx-0">
+                    <h3 class="m-0 p-0 fw-bold">Total Objek</h3>
+                    <p class="mt-0 p-0">Jumlah Objek Kendaraan per daerah</p>
+                  </div>
+                  <div class="row m-0">
+                    <div class="col-md-1 p-0 ">
+                    <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #F25022;">
+                      <h5 class="text-center m-0">1</h5>
+                    </div>
+                    </div>
+                    <div class="col-md-6 pt-1">
+                      <h5>Tambaksari</h5>
+                    </div>
+                    <div class="col-md-5 pt-1 text-end">
+                      <h5>40,960</h5>
+                    </div>
+                  </div>
+                  <div class="row m-0 mt-1 ">
+                    <div class="col-md-1 p-0 ">
+                    <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #FFB900;">
+                      <h5 class="text-center m-0">2</h5>
+                    </div>
+                    </div>
+                    <div class="col-md-6 pt-1">
+                      <h5>Gubeng</h5>
+                    </div>
+                    <div class="col-md-5 pt-1 text-end">
+                      <h5>21,600</h5>
+                    </div>
+                  </div>
+                  <div class="row m-0 mt-1">
+                    <div class="col-md-1 p-0 ">
+                    <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #7FBA00;">
+                      <h5 class="text-center m-0">3</h5>
+                    </div>
+                    </div>
+                    <div class="col-md-6 pt-1">
+                      <h5>Sukolilo</h5>
+                    </div>
+                    <div class="col-md-5 pt-1 text-end">
+                      <h5>20,832</h5>
+                    </div>
+                  </div>
+                  <div class="row m-0 mt-1">
+                    <div class="col-md-1 p-0 ">
+                    <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #00A4EF;">
+                      <h5 class="text-center m-0">4</h5>
+                    </div>
+                    </div>
+                    <div class="col-md-6 pt-1">
+                      <h5>Rungkut</h5>
+                    </div>
+                    <div class="col-md-5 pt-1 text-end">
+                      <h5>19,842</h5>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 me-auto border">
+              <div class="card">
+                <div class="card-body">
+                  <input class="form-select">
+                  <div class="px-2">
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row my-3">
+            <div class="card">
+              <div class="card-body">
+                <p>Testing 5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const content = document.querySelector('.content');
+      const subcontent = document.querySelector('.subcontent');
+      
+      sidebar.classList.toggle('collapsed');
+      content.classList.toggle('collapsed');
+      subcontent.classList.toggle('collapsed');
+    }
+  </script>
+  <script src="assets/js/chart.js"></script>
+</body>
+</html>
