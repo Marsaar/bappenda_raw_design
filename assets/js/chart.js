@@ -9,6 +9,7 @@ var Rungkut =19842,
 
 var labels = ['Rungkut', 'Sukolilo', 'Gubeng', 'Tambaksari']
 var data = [ Rungkut, Sukolilo, Gubeng, Tambaksari];
+
 var totdata = data.reduce(function(a, b) {
   return a + b;
 }, 0);
