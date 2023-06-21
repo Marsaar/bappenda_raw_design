@@ -2,19 +2,24 @@
 <html>
 <head>
   <title>Collapsed Sidebar Example</title>
-  
+  <!--DataTables-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <!--Chart JS-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-  
+  <!--Icons-->
   <script src="https://kit.fontawesome.com/d43e9fb66a.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
 
-  <style>
-    
-  </style>
+  <script src="assets/js/app.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <div class="container-fluid">
@@ -49,6 +54,7 @@
 
       <div class="row subcontent">
         <div class="col mx-3 my-4">
+
           <div class="row px-auto">
             <div class="card info mx-auto">
               <div class="card-body px-3">
@@ -108,13 +114,14 @@
           </div>
 
           <div class="row my-3">
-            <div class="col-md-4 ms-auto border">
+            <div class="col ">
               <div class="card m-0" >
-              <div class="card-body p-4">
-                <div class="row p-0 mx-0">
+                <div class="card-header pb-0">
                   <h3 class="m-0 p-0 fw-bold">Total Potensi</h3>
                   <p class="mt-0 p-0">Pajak Kendaraan Bermotor per daerah</p>
                 </div>
+              <div class="card-body p-4">
+                
                 <div class="row m-0">
                   <div class="col-md-1 p-0 ">
                   <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #F25022;">
@@ -128,7 +135,7 @@
                     <h5>Rp. 33,9 M</h5>
                   </div>
                 </div>
-                <div class="row m-0 mt-1 ">
+                <div class="row m-0 ">
                   <div class="col-md-1 p-0 ">
                   <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #FFB900;">
                     <h5 class="text-center m-0">2</h5>
@@ -172,14 +179,15 @@
               </div>
             </div>
 
-            <div class="col-md-4 border">
+            <div class="col">
               <div class="card">
-                <div class="card-body p-4">
-                  
-                  <div class="row p-0 mx-0">
+                <div class="card-header bg-dark text-white pb-0">
                     <h3 class="m-0 p-0 fw-bold">Total Objek</h3>
                     <p class="mt-0 p-0">Jumlah Objek Kendaraan per daerah</p>
-                  </div>
+                </div>
+                <div class="card-body m-0">
+                  
+                  
                   <div class="row m-0">
                     <div class="col-md-1 p-0 ">
                     <div class="container rounded-3 col p-1 fw-bold" style="color: #ffffff; background-color: #F25022;">
@@ -237,7 +245,7 @@
               </div>
             </div>
 
-            <div class="col-md-4 me-auto border">
+            <div class="col">
               <div class="card">
                 <div class="card-body">
                   <input class="form-select">
@@ -253,27 +261,57 @@
           <div class="row my-3">
             <div class="card">
               <div class="card-body">
-                <p>Testing 5</p>
+
+                <table id="example" class="table table-hover table-striped">
+                  <thead class="table-dark">
+                    <tr>
+                      <th>Kecamatan</th>
+                      <th>Obyek (R2)</th>
+                      <th>Obyek (R4)</th>
+                      <th>PKB / Potensi (R2)</th>
+                      <th>PKB / Potensi (R4)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Gubeng</td>
+                      <td>14.916</td>
+                      <td>6.684</td>
+                      <td>2.884.124.400</td>
+                      <td>20.047.489.000</td>
+                    </tr>
+                    <tr>
+                      <td>Rungkut</td>
+                      <td>13.752</td>
+                      <td>6.090</td>
+                      <td>2.745.521.400</td>
+                      <td>17.386.516.200</td>
+                    </tr>
+                    <tr>
+                      <td>Sukolilo</td>
+                      <td>13.846</td>
+                      <td>6.986</td>
+                      <td>2.723.483.700</td>
+                      <td>23.195.942.700</td>
+                    </tr>
+                    <tr>
+                      <td>Tambaksari</td>
+                      <td>30.760</td>
+                      <td>9.736</td>
+                      <td>6.214.104.400</td>
+                      <td>27.690.784.000</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
     </div>
-  </div>
-  
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.querySelector('.sidebar');
-      const content = document.querySelector('.content');
-      const subcontent = document.querySelector('.subcontent');
-      
-      sidebar.classList.toggle('collapsed');
-      content.classList.toggle('collapsed');
-      subcontent.classList.toggle('collapsed');
-    }
-  </script>
+  </div> 
   <script src="assets/js/chart.js"></script>
 </body>
 </html>
