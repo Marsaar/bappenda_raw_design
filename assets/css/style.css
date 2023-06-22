@@ -10,7 +10,7 @@ body{
     left: 0;
     z-index: 1;
     padding: 48px 0px;
-    background-color: #212529;
+    background-color: #24262E;
     transition: all 0.3s;
     width: 350px;
     height: 100%;
@@ -69,7 +69,15 @@ body{
   }
   
   .info {
-    width: 900px;
+    width: 1000px;
   }
   
+  .bdr {
+    border-radius: 20px;
+    overflow: hidden;
+  }
   
+  .btmzero {
+    position : absolute;
+    bottom   : 10px;
+  }

@@ -23,7 +23,7 @@
 </head>
 <body>
   <div class="container-fluid">
-
+  <!--sidebar-->
   <div class="sidebar">
     <form class="mx-4">
       <label class="form-label fw-bold">UPT</label>
@@ -40,15 +40,23 @@
       <br>
       <button class="btn btn-success submit-button fw-bold"> <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> Submit </button>
     </form>
+    <div class="btmzero">
+      <div class="row border-top border-secondary mx-3 pt-2 px-1">
+        <div class="col-3 p-0 "><img class="navbar-brand float-end m-0" src="assets/img/bpdjatim.png" width="24px" width="34px"></div>
+        <div class="col ps-2"><h6>Badan Pendapatan Daerah Jawa Timur</h6></div>
+        <div class="col-1"></div>
+      </div>
+    </div>
   </div>
   
   <div class="content">
 
       <div class="row">
+        <!--navbar-->
         <nav class="navbar navbar-dark">
           <button class="btn btn-dark rounded-button" onclick="toggleSidebar()"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
-          <span class="navbar-brand mx-auto">
-            <h3><img class="navbar-brand" src="bpdjatim.png" width="34px" width="48px">Prioritas Penempatan Lokasi Samsat Keliling</h1>
+          <span class="navbar-brand mx-auto py-2">
+            <h3><i class="fa-solid fa-truck-fast fa-lg" style="color: #ffffff;"></i>  Prioritas Penempatan Lokasi Samsat Keliling</h3>
           </span>
         </nav>
       </div>
@@ -57,7 +65,12 @@
         <div class="col mx-3 my-4">
 
           <div class="row px-auto">
-            <div class="card info mx-auto">
+          <!--info-->
+          <div> 
+            <div class="card info px-0 mx-auto rounded-3 overflow-hidden">
+              <div class="card-header p-0 bg-dark text-white text-center ">
+                <h6 class="my-2"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>  Surabaya Timur</h6>
+              </div>
               <div class="card-body px-3">
                 
                   <div class="row m-0">
@@ -115,11 +128,12 @@
           </div>
 
           <div class="row my-3">
+            <!--list potensi-->
             <div class="col ">
               <div class="card m-0" >
                 <div class="card-header bg-dark text-white pb-0">
                   <h3 class="m-0 p-0 fw-bold">Total Potensi</h3>
-                  <p class="mt-0 p-0">Pajak Kendaraan Bermotor per daerah</p>
+                  <p class="mt-0 p-0">Pajak Kendaraan Bermotor 4 Teratas</p>
                 </div>
                 <div class="card-body p-3">
                 
@@ -133,7 +147,7 @@
                     <h5>Tambaksari</h5>
                   </div>
                   <div class="col-md-5 pt-1 text-end">
-                    <h5>Rp 33.9 M</h5>
+                    <h5>Rp33.9 M</h5>
                   </div>
                 </div>
                 <div class="row m-0 mt-1 border-bottom">
@@ -146,7 +160,7 @@
                     <h5>Gubeng</h5>
                   </div>
                   <div class="col-md-5 pt-1 text-end">
-                    <h5>Rp 23.13 M</h5>
+                    <h5>Rp23.13 M</h5>
                   </div>
                 </div>
                 <div class="row m-0 mt-1 border-bottom">
@@ -159,7 +173,7 @@
                     <h5>Sukolilo</h5>
                   </div>
                   <div class="col-md-5 pt-1 text-end">
-                    <h5>Rp 25.91 M</h5>
+                    <h5>Rp25.91 M</h5>
                   </div>
                 </div>
                 <div class="row m-0 mt-1 border-bottom">
@@ -172,22 +186,36 @@
                     <h5>Rungkut</h5>
                   </div>
                   <div class="col-md-5 pt-1 text-end">
-                    <h5>Rp 20.13 M</h5>
+                    <h5>Rp20.13 M</h5>
                   </div>
                 </div>
 
                 </div>
                 <div class="card-footer bg-dark text-white">
-                  <h5>Total : Rp 103.087.965.800,00</h5>
+                  <h5>Total : Rp103.087.965.800</h5>
                 </div>
               </div>
             </div>
-
+            <!--Chart-->
+            <div class="col">
+              <div class="card p-0 border border-2 rounded-3" style="height: 328px;">
+                <div class="card-body p-3">
+                  <div class="px-2">
+                    <select class="form-select">
+                      <option>Potensi</option>
+                      <option>Objek</option>
+                    </select>
+                    <canvas id="myChart" class="p-0"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--list objek-->
             <div class="col">
               <div class="card">
                 <div class="card-header bg-dark text-white pb-0">
                     <h3 class="m-0 p-0 fw-bold">Total Objek</h3>
-                    <p class="mt-0 p-0">Jumlah Objek Kendaraan per daerah</p>
+                    <p class="mt-0 p-0">Jumlah Objek Kendaraan 4 Teratas</p>
                 </div>
                 <div class="card-body m-0">
                   
@@ -251,24 +279,15 @@
               </div>
             </div>
 
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <input class="form-select">
-                  <div class="px-2">
-                    <canvas id="myChart" class="border"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
           </div>
 
           <div class="row my-3">
-            <div class="card">
-              <div class="card-body ">
-                
-                <table id="example" class="table table-hover table-striped border">
+            <!--<div class="card">
+              <div class="card-body ">-->
+                <!--tabel-->
+                <table id="example" class="table table-hover table-light table-striped border rounded-3 overflow-hidden">
                   <thead class="table-dark">
                     <tr>
                       <th>Kecamatan</th>
@@ -319,8 +338,8 @@
                   </tfoot>
                 </table>
               
-              </div>
-            </div>
+              <!--</div>
+            </div>-->
           </div>
 
         </div>
